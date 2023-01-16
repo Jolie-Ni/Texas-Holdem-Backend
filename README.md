@@ -5,5 +5,4 @@ This contains the game flow of Texas Holem and connects to a non-sql database th
 2. microservices architecture
 3. no sql database
 - mongodb
-- test test
-- test 2
+- bbbbbbbbb
