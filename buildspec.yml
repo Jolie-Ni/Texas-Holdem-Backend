@@ -14,6 +14,7 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
+      - mv target/texas-holdem-backend-1.0.0.jar texas-holdem-backend-1.0.0.jar
 artifacts:
   files:
-    - target/texas-holdem-backend-1.0.0.jar
+    - texas-holdem-backend-1.0.0.jar
