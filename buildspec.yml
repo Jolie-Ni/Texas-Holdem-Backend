@@ -16,4 +16,4 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
-    - target/texas-holdem-backend-1.0.jar
+    - target/texas-holdem-backend-1.0.0.jar
