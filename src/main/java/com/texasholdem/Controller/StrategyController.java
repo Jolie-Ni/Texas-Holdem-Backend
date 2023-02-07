@@ -28,7 +28,8 @@ public class StrategyController {
         if(strategyService.getStrategyWithGameState(gameState).isPresent()){
             return strategyService.getStrategyWithGameState(gameState).get();
         }else{
-            return null;
+            Strategy strategy = new Strategy(gameState, 0.5, 0.0, 0.5);
+            return strategy;
         }
     }
 
