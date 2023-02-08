@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/strategy")
@@ -25,12 +26,8 @@ public class StrategyController {
 
     @GetMapping("/get")
     public Strategy get(@RequestParam("gamestate") String gameState){
-        if(strategyService.getStrategyWithGameState(gameState).isPresent()){
-            return strategyService.getStrategyWithGameState(gameState).get();
-        }else{
-            Strategy strategy = new Strategy(gameState, 0.5, 0.0, 0.5);
-            return strategy;
-        }
+        Optional<Strategy> strategy = strategyService.getStrategyWithGameState(gameState);
+        return strategy.orElse(null);
     }
 
 }
