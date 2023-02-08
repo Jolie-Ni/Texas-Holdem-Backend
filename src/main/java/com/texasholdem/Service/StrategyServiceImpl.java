@@ -60,7 +60,7 @@ public class StrategyServiceImpl implements StrategyService{
                     cards[1] = cards[1].substring(2);
                 }
             } catch (NumberFormatException e) {
-                System.out.println("String: " + cards[0] + " can not be converted to int");
+                System.out.println("String: " + cards[1] + " can not be converted to int");
             }
         }
 
