@@ -1,5 +1,6 @@
 package com.texasholdem.Controller;
 
+import com.texasholdem.Entity.ErrorResponse;
 import com.texasholdem.Entity.Strategy;
 import com.texasholdem.Service.StrategyService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+
 
 @RestController
 @RequestMapping("/api/strategy")
@@ -40,23 +42,3 @@ public class StrategyController {
     }
 }
 
-class ErrorResponse {
-    private int errorCode;
-    private String msg;
-
-    public int getErrorCode() {
-        return errorCode;
-    }
-
-    public String getMsg() {
-        return msg;
-    }
-
-    public void setErrorCode(int errorCode) {
-        this.errorCode = errorCode;
-    }
-
-    public void setMsg(String msg) {
-        this.msg = msg;
-    }
-}
