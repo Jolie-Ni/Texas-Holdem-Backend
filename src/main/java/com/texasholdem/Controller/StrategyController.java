@@ -35,8 +35,8 @@ public class StrategyController {
     }
 
     @GetMapping("/get")
-    public Strategy get(@RequestParam("gamestate") String gameState) throws Exception{
-        Optional<Strategy> strategy = strategyService.getStrategyWithGameState(gameState);
+    public Strategy get(@RequestParam("gamestate") String gameState, @RequestParam("allow_check") boolean allow_check) throws Exception{
+        Optional<Strategy> strategy = strategyService.getStrategyWithGameState(gameState, allow_check);
         if (!strategy.isPresent()) throw new Exception("Strategy should not be null");
         return strategy.get();
     }
