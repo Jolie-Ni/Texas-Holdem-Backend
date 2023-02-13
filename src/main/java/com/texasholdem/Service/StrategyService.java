@@ -11,7 +11,7 @@ import java.util.Optional;
 
 public interface StrategyService {
     public List<Strategy> getAll();
-    public Optional<Strategy> getStrategyWithGameState(String gameState, boolean allow_check);
+    public Optional<Strategy> getStrategyWithGameState(String gameState, boolean allowCheck);
 
     public void saveStrategy(Strategy strategy);
 }

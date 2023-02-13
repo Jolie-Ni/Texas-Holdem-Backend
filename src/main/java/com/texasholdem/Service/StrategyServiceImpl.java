@@ -170,11 +170,11 @@ public class StrategyServiceImpl implements StrategyService{
         return strategyRepository.findAll();
     }
 
-    public Optional<Strategy> getStrategyWithGameState(String gameState, boolean allow_check){
+    public Optional<Strategy> getStrategyWithGameState(String gameState, boolean allowCheck){
         if (strategyRepository.existsById(gameState))
             return strategyRepository.findById(gameState);
         else
-            return Optional.of(oddsCalculator(gameState, 10000, allow_check));
+            return Optional.of(oddsCalculator(gameState, 10000, allowCheck));
     }
 
     public void saveStrategy(Strategy strategy){
